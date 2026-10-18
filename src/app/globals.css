@@ -3,21 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #fff8f0;
+  --foreground: #3a2e26;
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #fff8f0 0%, #ffecd9 55%, #ffe1bf 100%);
+  background-attachment: fixed;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, Roboto, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
 }
 
 @layer utilities {
