@@ -1,10 +1,14 @@
 import ProfileHeader from "@/components/ProfileHeader";
-import LinkCard from "@/components/LinkCard";
+import LinkList from "@/components/LinkList";
 
 const links = [
-  { label: "🚩 GitHub", href: "https://github.com/trizzen-jc" },
-  { label: "✏️ Naver Mail", href: "mailto:etycoon@naver.com" },
-  { label: "🚢 X.com", href: "https://x.com/john_tycoon" },
+  { id: "github", label: "🚩 GitHub", href: "https://github.com/trizzen-jc" },
+  {
+    id: "naver-mail",
+    label: "✏️ Naver Mail",
+    href: "mailto:etycoon@naver.com",
+  },
+  { id: "x", label: "🚢 X.com", href: "https://x.com/john_tycoon" },
 ];
 
 export default function Home() {
@@ -15,11 +19,7 @@ export default function Home() {
         bio="전략기획 : 지금은 AI 공부중"
         imageUrl="/profile.jpg"
       />
-      <div className="flex w-full flex-col gap-5">
-        {links.map((link) => (
-          <LinkCard key={link.label} label={link.label} href={link.href} />
-        ))}
-      </div>
+      <LinkList links={links} />
     </main>
   );
 }
